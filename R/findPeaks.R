@@ -6,6 +6,7 @@ function(
   score.obj,       # A scoreList object, complete output from corMatch or binMatch
   fd.rat=1,        # Factor to multiply template duration by for determining frame width
   frame,           # Or directly specify the frame width
+  show.prog=FALSE  # show messages
   parallel=FALSE
 ) {
 
@@ -66,7 +67,7 @@ function(
   detections <- lapply(results, `[[`, 'detections')
 
   object <- new('detectionList', survey.name=score.obj@survey.name, survey=score.obj@survey, survey.data=score.obj@survey.data, templates=score.obj@templates, scores=score.obj@scores, peaks=peaks, detections=detections)
-  cat('\nDone\n')
+  if(show.prog) cat('\nDone\n')
   return(object)
 }
 
