@@ -6,7 +6,7 @@ function(
   score.obj,       # A scoreList object, complete output from corMatch or binMatch
   fd.rat=1,        # Factor to multiply template duration by for determining frame width
   frame,           # Or directly specify the frame width
-  show.prog=FALSE  # show messages
+  show.prog=FALSE,  # show messages
   parallel=FALSE
 ) {
 
