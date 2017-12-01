@@ -57,7 +57,7 @@ function(
       # Summarize peak results
       summary <- c(n.peaks=round(nrow(pks)), n.hits=round(nrow(hits)), max.score=signif(max(score), 3), min.score=signif(min(score), 3))
 
-      cat('\nDone with ', i)
+      if(show.prog) cat('\nDone with ', i)
       return(list(peaks=pks, detections=hits))
     }
   )
